@@ -1,0 +1,113 @@
+.workoutsContainer {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+.workoutsSlider {
+  display: flex;
+  overflow-x: scroll; /* Changed from 'auto' or 'hidden' to 'scroll' */
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+/* Customize scrollbar appearance for supported browsers */
+.workoutsSlider::-webkit-scrollbar {
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.workoutsSlider::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey track */
+  border-radius: 4px;
+}
+
+.workoutsSlider::-webkit-scrollbar-thumb {
+  background: #888; /* Grey thumb */
+  border-radius: 4px;
+}
+
+.workoutsSlider::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Dark grey when hovering */
+}
+
+.workoutCard {
+  min-width: 280px;
+  flex: 0 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.workoutCard:hover {
+  transform: translateY(-5px);
+}
+
+.exercisesList {
+  margin-top: 10px;
+}
+
+.exerciseItem {
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
+.exerciseName {
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.muscleGroup {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.navButton {
+  position: absolute;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prevButton {
+  left: -20px;
+}
+
+.nextButton {
+  right: -20px;
+}
+
+.paginationIndicator {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+}
