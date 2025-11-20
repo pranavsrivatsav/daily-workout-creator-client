@@ -7,7 +7,11 @@ import { WorkoutLogRequest } from "../types/api/requests/workoutLogRequest";
 // Define our API service using RTK Query
 export const workoutService = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000" }), // Adjust the baseUrl to your API URL
+  baseQuery: fetchBaseQuery({
+    baseUrl:
+      import.meta.env.VITE_API_BASE_URL ||
+      "https://daily-workout-creator-production.up.railway.app",
+  }),
   tagTypes: ["WorkoutSuggestion", "WorkoutLogs"],
   endpoints: (builder) => ({
     getExercises: builder.query<ExerciseListResponse, void>({
