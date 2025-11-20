@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { ExerciseListResponse } from "../types/api/responses/ExerciseLIstResponse";
+import { ExerciseListResponse } from "../types/api/responses/ExerciseListResponse";
 import { WorkoutResponse } from "../types/api/responses/workoutResponse";
 import { WorkoutListResponse } from "../types/api/responses/workoutListResponse";
 import { WorkoutLogRequest } from "../types/api/requests/workoutLogRequest";
